@@ -19,14 +19,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=234254843346719";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
 		<h1>This super sweet logo brought to you by Cody</h1>
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
 						<a class="brand" href="#">Ready Set Drop</a>
 						<ul class="nav">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">The Hydropack</a></li>
+							<li><a href="#" onclick="scrollContent(1)">Home</a></li>
+							<li><a href="#" onclick="scrollContent(2)">The Hydropack</a></li>
 							<li><a href="#">What if?</a></li>
 							<li><a href="#">Follow the Drop</a></li>
 							<li><a href="#">About the Campaign</a></li>
