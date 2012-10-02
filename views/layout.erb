@@ -1,6 +1,41 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
+	<head>
+    <!--<link href="/css/application.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/javascript/application.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-alerts.js"></script>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
+    <style>
+    	body { 
+    		padding-top: 60px;
+    	}
+    </style>
+    <%= css :bootstrap %>
+	</head>
 	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+						<a class="brand" href="#">Ready Set Drop</a>
+						<ul class="nav">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">The Hydropack</a></li>
+							<li><a href="#">What if?</a></li>
+							<li><a href="#">Follow the Drop</a></li>
+							<li><a href="#">About the Campaign</a></li>
+							<li><a href="#">Donate now</a></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	
 		<%= yield %>
+		
+		   <!-- Le javascript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= js :main %>
 	</body>
 </html>

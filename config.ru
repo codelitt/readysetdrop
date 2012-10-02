@@ -1,3 +1,5 @@
-require './readysetdrop'
+require 'bundler'
+Bundler.require
 
-run Sinatra::Application
+require './readysetdrop.rb'
+run App
