@@ -16,8 +16,8 @@ class App < Sinatra::Base
       '/js/vendor/bootstrap*.js'
     ]
     
-    js :scroll, [
-    	'/js/scroll.js'
+    js :scroll, '/js/scroll.js', [
+    	'/js/scroll*.js'
     ]
 
     css :bootstrap, [
