@@ -13,11 +13,8 @@ class App < Sinatra::Base
 
     js :main, '/js/main.js', [
       '/js/vendor/jquery*.js',
-      '/js/vendor/bootstrap*.js'
-    ]
-    
-    js :scroll, '/js/scroll.js', [
-    	'/js/scroll*.js'
+      '/js/vendor/bootstrap*.js',
+      '/js/scroll.js'
     ]
 
     css :bootstrap, [
@@ -25,7 +22,7 @@ class App < Sinatra::Base
       '/css/responsive.css'
     ]
 
-    prebuild false 
+    prebuild true
 
   end
 
