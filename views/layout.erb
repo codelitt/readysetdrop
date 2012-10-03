@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
     <style>
     	body { 
-    		padding-top: 60px;
+    		padding-top: 20px;
     		padding-left: 15px;
     		padding-right: 15px;
     		padding-bottom: 30px;
@@ -18,55 +18,54 @@
     <%= css :bootstrap %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body>
-		<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
 	<header>
-		<h1>This super sweet logo brought to you by Cody</h1>
-		<div class="navbar">
+		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 						<ul class="nav">
-							<li><a href="#" onclick="scrollContent(1)">Home</a></li>
-							<li><a href="#" onclick="scrollContent(2)">The Hydropack</a></li>
-							<li><a href="#">What if?</a></li>
-							<li><a href="#">Follow the Drop</a></li>
-							<li><a href="#">About the Campaign</a></li>
-							<li><a href="#">Donate now</a></li>
+							<li><a class="scroll" href="#content1">Home</a></li>
+							<li><a class="scroll" href="#content2">The Hydropack</a></li>
+							<li><a class="scroll" href="#content3">What if?</a></li>
+							<li><a class="scroll" href="#content4">Follow the Drop</a></li>
+							<li><a class="scroll" href="#content5">About the Campaign</a></li>
+							<li><a href="http://causes.com">Donate now</a></li>
 					</div>
 				</ul>
 			</div>
 		</div>
 	</header>
+	<body>
+	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<%= yield %>
 		
 		   <!-- Le javascript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= js :main %>
-		<footer class="footer">
-			<address>
-	    	<strong>READY SET DROP</strong><br>
-	    	Brought to you by DESIGN FORUM PDX<br>
-	    	222 NW 5th Ave<br>
-	    	Portland, OR 97209<br>
-	    	<abbr title="Phone">P:</abbr> 503-432-5001
-	    </address>
-	     
-	    <address>
-	    	<a href="mailto:#">info@designforumpdx.com</a>
-	    </address>
-	    <div class="bottomlinks">
-	    	<ul>
-	    		<li></li>
-	    	</ul>
-	    </div>
-		</footer>
 	</body>
+	<footer class="footer">
+		<address>
+    	<strong>READY SET DROP</strong><br>
+    	Brought to you by DESIGN FORUM PDX<br>
+    	222 NW 5th Ave<br>
+    	Portland, OR 97209<br>
+    	<abbr title="Phone">P:</abbr> 503-432-5001
+    </address>
+     
+    <address>
+    	<a href="mailto:#">info@designforumpdx.com</a>
+    </address>
+    <div class="bottomlinks">
+    	<ul>
+    		<li></li>
+    	</ul>
+    </div>
+	</footer>
 </html>

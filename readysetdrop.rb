@@ -13,7 +13,8 @@ class App < Sinatra::Base
 
     js :main, '/js/main.js', [
       '/js/vendor/jquery*.js',
-      '/js/vendor/bootstrap*.js'
+      '/js/vendor/bootstrap*.js',
+      '/js/app.js',
     ]
 
     css :bootstrap, [
