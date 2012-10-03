@@ -25,7 +25,7 @@ class App < Sinatra::Base
       '/css/responsive.css'
     ]
 
-    prebuild true
+    prebuild false 
 
   end
 
