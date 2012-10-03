@@ -1,3 +1,4 @@
+//scroll functionality. 700ms
 (function() {
 var scrollLink = $('a.scroll')
 scrollLink.on('click', function(event){

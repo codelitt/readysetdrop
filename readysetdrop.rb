@@ -13,8 +13,11 @@ class App < Sinatra::Base
 
     js :main, '/js/main.js', [
       '/js/vendor/jquery*.js',
-      '/js/vendor/bootstrap*.js',
-      '/js/app.js',
+      '/js/vendor/bootstrap*.js'
+    ]
+    
+    js :scroll, [
+    	'/js/scroll.js'
     ]
 
     css :bootstrap, [
