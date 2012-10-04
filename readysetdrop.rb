@@ -11,6 +11,8 @@ class App < Sinatra::Base
   register Sinatra::AssetPack
 # '/js/vendor/bootstrap*.js'
   assets do
+  
+	  serve '/images', from: 'app/images'
 
     js :main, '/js/main.js', [
       '/js/vendor/jquery*.js'
