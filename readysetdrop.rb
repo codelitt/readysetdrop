@@ -2,6 +2,7 @@ require 'rubygems' if RUBY_VERSION < "1.9"
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'erb'
+require 'uglifier'
 
 class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
