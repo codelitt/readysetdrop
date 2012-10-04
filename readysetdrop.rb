@@ -25,7 +25,7 @@ class App < Sinatra::Base
       '/css/responsive.css'
     ]
     
-    js_compression :closure 
+    js_compression :uglify 
 
     prebuild true
 
