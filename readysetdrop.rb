@@ -9,12 +9,11 @@ class App < Sinatra::Base
   Less.paths << "#{App.root}/app/css"
 
   register Sinatra::AssetPack
-
+# '/js/vendor/bootstrap*.js'
   assets do
 
     js :main, '/js/main.js', [
-      '/js/vendor/jquery*.js',
-      '/js/vendor/bootstrap*.js'
+      '/js/vendor/jquery*.js'
     ]
 
 		js :appscroll, '/js/appscroll.js', [
