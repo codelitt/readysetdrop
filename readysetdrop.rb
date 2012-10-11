@@ -36,6 +36,10 @@ class App < Sinatra::Base
   get '/' do
     erb :index
   end
+  
+  not_found do
+  	redirect '/404.html'
+	end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
