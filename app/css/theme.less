@@ -6,26 +6,87 @@
 // icons path
 // -------------------------
 
-#maincontainer {
-	margin-left: auto;
-	margin-right: auto;
+html {
+	overflow-x: hidden;
+}
+
+body { 
+	padding-top: 20px;
+	padding-bottom: 5px;
+	overflow-x: hidden;
 }
 
 //Headers 
-h1, h2, h3, h4, h5, h6 {
-	color: #555555;
+
+h2 {
+	position: relative;
+	background: #888888; 
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	font-size: 24px;   
 }
+h2:before, h2:after {
+	content: "";
+	position: absolute;
+	background: #888888;  /* Match the background */
+	top: 0;
+	bottom: 0;
+	width: 9999px;   /* some huge width */
+} 
+h2:before {
+	right: 100%; 
+}
+h2:after {
+   left: 100%;
+}
+
+h3 {
+	color: #17AFE5;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	font-size: 18px;   	
+}
+
+.h3lead {
+	color: #4D4D4D;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;   
+}
+
+h4 {
+	color: #888888;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px; 
+}
+
+/*h2 {
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	padding-left: 2%;
+	background-color: #4D4D4D;
+	width: 100%;
+}*/
+
 
 //Body text
 
 p {
 	color: #555555;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	
 }
 
 //Navbar customisation 
 
 .navbar-inner {
-  background-color: #888888; /* background color will be black for all browsers */
+  background-color: #888888; 
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
@@ -51,9 +112,16 @@ hr {
 	width: auto;
 }
 
+//scroll support
 .contentWrapper {
-	padding-top: 50px;
+	padding-top: 30px;
 }
+
+#maincontainer {
+	padding-bottom: 200px;
+}
+
+//footer 
 
 footer {
   position: relative;
@@ -63,7 +131,7 @@ footer {
   padding-top:20px;
   background-color: #888888;
   a:link {color: white;}
-  a:visited {color: #555555;}
+  a:visited {color: #white;}
   address {
   	color: white;
   	padding-left: 10px;
@@ -157,7 +225,7 @@ section#home {
 
 #navbarlogo {
 	display:block;
-	width: 125px;
+	width: 200px;
 	height: 25px;
 	background:transparent url(/images/rsdlogo_navbar.png) center top no-repeat;
 }
@@ -199,3 +267,5 @@ section#home {
 	padding-top: 3%;
 }
 
+#sponsortext {
+}

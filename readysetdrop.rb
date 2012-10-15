@@ -38,7 +38,7 @@ class App < Sinatra::Base
   end
   
   not_found do
-  	redirect '/404.html'
+  	redirect '404.html'
 	end
 
   # start the server if ruby file executed directly
