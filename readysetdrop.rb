@@ -3,6 +3,8 @@ require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'erb'
 require 'uglifier'
+require 'nokogiri'
+require 'open-uri'
 
 class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
@@ -34,6 +36,17 @@ class App < Sinatra::Base
   end
 
   get '/' do
+  	
+  	#load url to be scraped and parsed
+  	url = "http://www.causes.com/causes/791631-ready-set-drop/actions/1681438?utm_campaign=home"
+  	
+  	#pushes url data into Nokogiri to be parsed and sets object "data" as this url content
+  	data = Nokogiri::HTML(open(url))
+	
+		#create instance variable for span class "count" to be referenced in view
+		@count = data.css('.count')
+  	
+  	# renders ERB template 
     erb :index
   end
   

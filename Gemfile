@@ -8,3 +8,4 @@ gem 'less'
 gem 'uglifier'
 gem "therubyracer" 
 gem 'execjs'
+gem 'nokogiri'
