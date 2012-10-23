@@ -1,9 +1,6 @@
 <div class="container" id="maincontainer">
 	<div class="row-fluid">
-		<div class="contentWrapper" id="content1">
-		<div class="span12">
-			<h3>So far we've raised: <%= @count.at_css('.count').text %></h3>
-		</div>			
+		<div class="contentWrapper" id="content1">			
 			<div class="span12"><%= img '/images/rsdlogo.png' %></div>
 		</div>
 	</div>
@@ -15,25 +12,56 @@
 		<div class="span4"><a class="scroll" href="#content3" id="drop" title="The Hydropack"></a>
 		</div>
 	</div>
-	<hr size="5px">	
+	<div class="counter" id="countergraphic">
+			
+			<%= img '/images/countergraphic.png' %>
+			
+			<div class="counterd">
+				<%= @count.at_css('.count').text %>
+			</div>
+	</div>
 	<div class="row-fluid">
 		<div class="contentWrapper" id="content2">
-			<h2> About Ready Set Drop</h2>
-			<div class="span11"><h3>Ready Set Drop: A Campaign for the HydroPack Product</h3></div>
-			<div class="span11"><p class="h3lead">Ready Set Drop is the digital media campaign raising funds to manufacture and distribute the 								HydroPackTM product, with a goal to make it a global tool for immediate intervention in disaster relief scenarios.</p></div>
-			<div class="span5">
-				<h4>Hydration for a World in Need</h4>
-				<p>Ready Set Drop bridges a gap between product design innovation and social action. Contributors address this pressing global need while 					bringing communities suffering from water crisis to an effective hydration solution. The campaign has partnered with International 							Relief and Development (IRD), a Washington D.C.- based NGO responsible for implementing relief, stabilization and development programs 					worldwide. IRD will receive the donated HydroPackTM products for pre-positioning and delivery to disaster-struck communities.</p>
+			<div class="span12"><p class="h3lead">
+			<font color="#00AEEF">Ready Set Drop</font> is the digital media campaign raising funds to manufacture and distribute the 											HydroPack with a goal to make it a global tool for immediate intervention in disaster relief scenarios.</p>
 			</div>
-			<div class="span5">
-				<h4>Collaboration for Social Action</h4>
-				<p>Ready Set Drop is co-directed by Design Forum/PDX, Eastman Chemical and HTI Water. This partnership is an example of how a successful 					collaboration between designers and manufacturers leads to an important social cause and solution. This joint effort represents a 							primary interest in community well-being and a result that offers simplicity and healthy recovery in a time of confusion and 										disruption.<br><font color="#17AFE5"><a class="scroll" href="#content6">Click here to learn more about our partners.</a></font> </p>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper" id="content2">
+			<div class="span12"><hr size="5"></div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span6">
+				<%= img '/images/rsdsmall.png' %>
+			</div>
+			<div class="span6">
+				<%= img '/images/irdsmall.png' %>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span6">
+				<p>Ready Set Drop bridges a gap between product design innovation and social action. Contributors address this pressing global need while 				bringing communities suffering<br>from water crisis to an effective hydration solution.</p>
+			</div>
+			<div class="span6">
+				<p>The campaign has partnered with International Relief and Development (IRD), a Washington DC-based, nongovernmental organization. The 				non- profit is responsible for implementing relief, stability and development pro- grams worldwide. IRD will receive the donated 								HydroPack products for pre-positioning and delivery to disaster-struck communities.<br><font color="#17AFE5"><a class="scroll" 									href="#content6">Click here to learn more about our partners.</a></font> </p>
 			</div>
 		</div>
 	</div>
 	<div class="row-fluid">
 		<div class="contentWrapper" id="content3">
-			<h2>Hyrdropack&trade;:An Effective Solution</h2>
+			<h2>Hydropack&trade;</h2>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+		 	<div class="span11">
+		 	<p>HydroPacks prevent death and enable life, keeping disaster victims healthier and better equipped for recovery than any alternative 					hydration option.</p>
+		 	</div>
 		</div>
 	</div>
 	<div class="row-fluid">
@@ -41,15 +69,6 @@
 			<div class="span4"><%= img '/images/photo1.jpg'%></div>
 			<div class="span4"><%= img '/images/photo2.jpg'%></div>
 		 	<div class="span4"><%= img '/images/photo3.jpg'%></div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="contentWrapper">
-		 	<div class="span11">
-		 	<p>The HydroPackTM product is a single-use emergency water filter that delivers 500 ml of hydration from virtually any water source. By 					dropping a HydroPackTM in polluted water, purified water is filtered through the pouch overnight by osmosis, mixing with electrolytes 					and nutrient-rich powders to create a flavored, life-saving drink.</p>
-		 	<h4>Technology Meets Design</h4>
-		 	<p>The HydroPackTM uses a unique cellulose membrane that can be permeated only by pure water. This paper-thin barrier, developed by Eastman 				Chemical, blocks dirt, bacteria, viruses and other contaminants with a success rate that exceeds EPA standards for water purification. 					Once water is drawn in, the HydroPack’sTM protective membrane eliminates the possibility of recontamination. The nutrient powder inside 				produces an osmotic pressure that naturally draws water in through the membrane. This filtration process, developed by HTI Water, is 						known as forward osmosis and is identical to the process plants use to pull water into their roots. Eastman and HTI have collaborated in 				bringing together a brilliant technology and a thoughtful design to create the safest and most reliable mobile water filtration system 					available.</p>
-		 	</div>
 		</div>
 	</div>
 	<div class="hidden-phone">
@@ -62,13 +81,29 @@
 			<iframe width="300" height="169" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+		 	<div class="span11">
+		 	<p>The HydroPack is a single-use emergency water filter that delivers 500 milliliters of hydration from virtually any water source. When a 			HydroPack is dropped in a polluted source, water is filtered as it is drawn through the membrane overnight by osmosis, mixing with 							electrolytes and nutrient-rich powders to create a safe, flavored and life-saving drink. </p>
+		 	</div>
+		</div>
+	</div>
 	 <div class="row-fluid">
 	 	<div class="contentWrapper" id="content4">
-	 		<h2>What if the world had Hydropacks?</h2>
+	 		<h2>Position The Solution</h2>
+	 		<div class="span12">
+	 		<%= img '/images/map.png' %>
+	 		</div>
+	 		<div class="span4">
+	 		<%= img '/images/HoverState_Albany.png' %>
+	 		</div>
+	 	</div>
+	 </div>
+	 <div class="row-fluid">
+	 	<div class="contentWrapper" id="content4">
+	 		<h2>Hydrate The World</h2>
 	 		<div class="span11">
 	 		<h3>INFOGRAPHIC</h3>
-	 		<p>Around the world, millions of lives are lost each year due to water crisis situations. Natural disasters are a common threat against 					safe community water as they often lead to contamination and the vulnerable health of the community at stake.</P>
-			<p>Humans can only live for a few days without hydration. The result? Disaster-struck communities are victims to the spread of waterborne 				disease and/or geographic displacement. In fact, the majority of deaths occur in the aftermath of a disaster rather than during the 						initial blow, leaving disaster-struck communities without potable water to face a slow and troublesome recovery. We’re ready for an 						innovative alternative, and the HydroPackTM offers this opportunity.</p>
 	 		</div>
 	 	</div>
 	 </div>
@@ -90,24 +125,29 @@
 	 </div>
 	<div class="row-fluid">
 	 	<div class="contentWrapper" id="content6">
-			<h2>About our Partners</h2>
+			<h2>Partners</h2>
+			<div class="span12">
+				<h3>Collaborating For Social Action</h3>
+				<p>Ready Set Drop is co-directed by Design Forum/PDX, Eastman Chemical and HTI Water. This partnership is an example of how a successful 					collaboration between designers and manufacturers leads to an important social cause and solution. This joint effort represents a 							primary interest in community well-being and a result that offers simplicity and healthy recovery in a time of confusion and 										disruption.</p>
+			</div>
+			<div class="span11"><hr size="5px"></div>
 			<div class="span3"><%= img '/images/IRD.png' %></div>
-			<div class="span8" id="sponsortext">
-				<p>International Relief and Development is a Washington D.C.-based NGO responsible for implementing relief, stabilization and development 					programs worldwide. IRD will be given the HydroPackTM product for pre-positioning and delivery to disaster-struck communities. IRD 							shares our primary interest in community well-being as together we provide simplicity and healthy recovery in a time of confusion and 					disruption.</p>
+			<div class="span8" id="irdtext">
+				<p>International Relief and Development is a Washington, D.C.-based, nonprofit NGO responsible for implementing relief, stability, and 						development programs worldwide. IRD will be given the HydroPackTM product for pre-positioning and delivery to disaster-struck 									communities. IRD shares our primary interest in community well-being as together we provide simplicity and healthy 															recovery in a time of confusion and disruption.</p>
 			</div>
 			<div class="span11"><hr size="5px"></div>
 			<div class="span3"><%= img '/images/DFPDX.png' %></div>
-			<div class="span8" id="sponsortext">
+			<div class="span8" id="dfpdxtext">
 				<p>Design Forum/PDX is a Portland, Oregon-based resource organization that celebrates design. The nonprofit supports creativity at every 					stage from inspiration to final product. By identifying creative opportunities and providing new tools for the design community, Design 					Forum/PDX embodies a pervasive drive to discover, collaborate and exchange ideas. Through this digital media campaign, Design Forum/PDX 					hopes to raise awareness around innovation and development going on within the Portland design community as well as highlight an 								example where successful collaboration between designers and manufacturers has led to an important social cause and solution.</p>
 			</div>
 			<div class="span11"><hr size="5px"></div>
 			<div class="span3"><%= img '/images/HTI.png' %></div>
-			<div class="span8" id="sponsortext">
+			<div class="span8" id="htitext">
 				<p>HTI Water manufactures the HydroPackTM with a nutrient powder inside that produces an osmotic pressure that naturally draws water in 					through the membrane. This filtration process (known as forward osmosis) is identical to the process plants use to pull water into 							their roots. HTI’s exciting design represents the safest and most reliable mobile water filtration system available.</p>
 			</div>
 			<div class="span11"><hr size="5px"></div>
 			<div class="span3" id="Eastmanlogo"><%= img '/images/Eastman.png' %></div>
-			<div class="span8" id="sponsortext">
+			<div class="span8" id="eastmantext">
 				<p>Eastman Chemical has developed the HydroPack’sTM unique cellulose membrane that can be permeated only by pure water. The paper-thin 						barrier blocks dirt, bacteria, viruses and other contaminants with a success rate that exceeds EPA standards for water purification. 						Once water is drawn in, the HydroPack’sTM protective membrane eliminates the possibility of recontamination. This brilliant material 						innovation is essential in the HydroPack’sTM innovative filtration process.</p>
 			</div>
 	 	</div>
