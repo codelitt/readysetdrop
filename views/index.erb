@@ -15,10 +15,18 @@
 	<div class="counter" id="countergraphic">
 			
 			<%= img '/images/countergraphic.png' %>
-			
-			<div class="counterd">
-				<%= @count.at_css('.count').text %>
-			</div>
+
+				<div class="counterd">
+					<%= @count.at_css('.count').text %>
+				</div>		
+				<div class="counterp">
+					<% percent = @percent.at_css('.count').to_s.delete "$" %>
+					<%= percent.to_i/450000 %>%
+				</div>
+				<div class="countern">
+					<% number = @number.at_css('.count').to_s.delete "$" %>
+					<%= number.to_i*1.5 %>
+				</div>
 	</div>
 	<div class="row-fluid">
 		<div class="contentWrapper">
@@ -143,12 +151,12 @@
 			<div class="span11"><hr size="5px"></div>
 			<div class="span3"><%= img '/images/HTI.png' %></div>
 			<div class="span8" id="htitext">
-				<p>HTI Water manufactures the HydroPackTM with a nutrient powder inside that produces an osmotic pressure that naturally draws water in 					through the membrane. This filtration process (known as forward osmosis) is identical to the process plants use to pull water into 							their roots. HTI’s exciting design represents the safest and most reliable mobile water filtration system available.</p>
+				<p>HTI Water manufactures the HydroPack with a nutrient powder inside that produces an osmotic pressure that naturally draws water in 					through the membrane. This filtration process (known as forward osmosis) is identical to the process plants use to pull water into 							their roots. HTI’s exciting design represents the safest and most reliable mobile water filtration system available.</p>
 			</div>
 			<div class="span11"><hr size="5px"></div>
 			<div class="span3" id="Eastmanlogo"><%= img '/images/Eastman.png' %></div>
 			<div class="span8" id="eastmantext">
-				<p>Eastman Chemical has developed the HydroPack’sTM unique cellulose membrane that can be permeated only by pure water. The paper-thin 						barrier blocks dirt, bacteria, viruses and other contaminants with a success rate that exceeds EPA standards for water purification. 						Once water is drawn in, the HydroPack’sTM protective membrane eliminates the possibility of recontamination. This brilliant material 						innovation is essential in the HydroPack’sTM innovative filtration process.</p>
+				<p>Eastman Chemical has developed the HydroPack’s unique cellulose membrane that can be permeated only by pure water. The paper-thin 						barrier blocks dirt, bacteria, viruses and other contaminants with a success rate that exceeds EPA standards for water purification. 						Once water is drawn in, the HydroPack’s protective membrane eliminates the possibility of recontamination. This brilliant material 							innovation is essential in the HydroPack’s innovative filtration process.</p>
 			</div>
 	 	</div>
 	</div>
