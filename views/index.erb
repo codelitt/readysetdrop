@@ -17,14 +17,16 @@
 			<%= img '/images/countergraphic.png' %>
 
 				<div class="counterd">
-					<%= @count.at_css('.count').text %>
+					<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
+					<%= count %>
+					
 				</div>		
 				<div class="counterp">
-					<% percent = @percent.at_css('.count').to_s.delete "$" %>
+					<% percent = @percent.at_css('div.stats p strong').to_s.delete "$","" %>
 					<a href="https://www.firstgiving.com/Npo/98291/Donation"><%= percent.to_i/450000 %>%</a>
 				</div>
 				<div class="countern">
-					<% number = @number.at_css('.count').to_s.delete "$" %>
+					<% number = @number.at_css('div.stats p strong').to_s.delete "$","" %>
 					<%= number.to_i*1.5 %>
 				</div>
 	</div>

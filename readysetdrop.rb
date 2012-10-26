@@ -38,15 +38,15 @@ class App < Sinatra::Base
   get '/' do
   	
   	#load url to be scraped and parsed
-  	url = "http://www.causes.com/causes/791631-ready-set-drop/actions/1681438?utm_campaign=home"
+  	url = "https://www.firstgiving.com/readysetdrop"
   	
   	#pushes url data into Nokogiri to be parsed and sets object "data" as this url content
   	data = Nokogiri::HTML(open(url))
 	
 		#create instance variable for span class "count" to be referenced in view
-		@count = data.css('.count')
-		@percent = data.css('.count')
-		@number = data.css('.count')
+		@count = data.css('div.stats')
+		@percent = data.css('div.stats')
+		@number = data.css('div.stats')
   	
   	# renders ERB template 
     erb :index
