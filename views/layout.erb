@@ -53,6 +53,7 @@
 			</div>
 		</div>
 	</header>
+	<%= yield %>
 	<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -61,7 +62,7 @@
 		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		<%= yield %>
+		<script language="javascript"type="text/javascript">function FG_4ccb04fb46c30_loadScript(){var fgScriptUrl='https://donate.firstgiving.com/dpa/static/js/site/fg_donation_opener.min.js';var script=document.createElement("script");script.type="text/javascript";if(script.readyState){script.onreadystatechange=function(){if(script.readyState=="loaded"||script.readyState=="complete"){script.onreadystatechange=null}}}else{script.onload=function(){}}script.src=fgScriptUrl;document.body.appendChild(script)}FG_4ccb04fb46c30_loadScript();</script></script>
 	<footer class="footer">
     <div class="rowfluid">
 	    <div class="span4">
@@ -83,7 +84,10 @@
 					<li><a class="scroll" href="#content2">The Cause</a></li>
 					<li><a class="scroll" href="#content3">HydroPack</a></li>
 					<li><a class="scroll" href="#content6">Follow the Drop</a></li>
-					<li><a href="https://www.firstgiving.com/Npo/98291/Donation">Donate now</a></li>
+					<li><a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
+								class="fg-donation-button-4ccb04fb46c30" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 									return false;">Donate now
+							</a>
+				</li>
 	    	</ul>
 	    </div>
 		</div>
