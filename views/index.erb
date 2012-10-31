@@ -24,16 +24,16 @@
 					class="fg-donation-button-4ccb04fb46c30 drop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
 				</a>
 	
-					<div class="counterd">
+					<div id="counterd">
 						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
 						<%= count %>
 						
 					</div>		
-					<div class="counterp">
+					<div id="counterp">
 						<% percent = @percent.at_css('div.stats p strong').to_s.delete "$","" %>
 						<%= percent.to_i/450000 %>%
 					</div>
-					<div class="countern">
+					<div id="countern">
 						<% number = @number.at_css('div.stats p strong').to_s.delete "$","" %>
 						<%= number.to_i*1.5 %>
 					</div>
