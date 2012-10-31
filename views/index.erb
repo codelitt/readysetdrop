@@ -15,28 +15,30 @@
 		<div class="span4"><a class="scroll" href="#content5" id="drop"></a>
 		</div>
 	</div>
-	<div class="counter" id="countergraphic">
-			
-			<%= img '/images/countergraphic.png' %>
-
-			<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
-				class="fg-donation-button-4ccb04fb46c30 drop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
-			</a>
-
-				<div class="counterd">
-					<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
-					<%= count %>
-					
-				</div>		
-				<div class="counterp">
-					<% percent = @percent.at_css('div.stats p strong').to_s.delete "$","" %>
-					<%= percent.to_i/450000 %>%
-				</div>
-				<div class="countern">
-					<% number = @number.at_css('div.stats p strong').to_s.delete "$","" %>
-					<%= number.to_i*1.5 %>
-				</div>
-	</div>
+	<div class="row-fluid">
+		<div class="span12" id="countergraphic">
+				
+				<%= img '/images/countergraphic.png' %>
+	
+				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
+					class="fg-donation-button-4ccb04fb46c30 drop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
+				</a>
+	
+					<div class="counterd">
+						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
+						<%= count %>
+						
+					</div>		
+					<div class="counterp">
+						<% percent = @percent.at_css('div.stats p strong').to_s.delete "$","" %>
+						<%= percent.to_i/450000 %>%
+					</div>
+					<div class="countern">
+						<% number = @number.at_css('div.stats p strong').to_s.delete "$","" %>
+						<%= number.to_i*1.5 %>
+					</div>
+			</div>
+		</div>
 	<div class="row-fluid">
 		<div class="contentWrapper">
 			<div class="span12"><p class="h3lead">
