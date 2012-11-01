@@ -46,7 +46,9 @@ class App < Sinatra::Base
 		#create instance variable for span class "count" to be referenced in view
 		@count = data.css('div.stats')
 		@percent = data.css('div.stats')
-		@number = data.css('div.stats')
+		@amount = data.css('div.stats')
+		amount = @amount.at_css('div.stats p strong').to_s.delete "$",""  
+		@amountm = amount.to_i*0.8
   	
   	# renders ERB template 
     erb :index
