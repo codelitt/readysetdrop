@@ -26,16 +26,16 @@
 	
 					<div id="counterd">
 						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
-						<%= count %>/$500,000
+						<%= count %>/$300,000
 					</div>		
 					<div id="counterp">
 						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<%= @percentm = percent.to_f/500000 %>%
+						<%= @percentm = percent.to_f/300000 %>%
 					</div>
 					<div id="countern">
 					  <% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
 						<% @amountm = amount.to_f*0.833 %>
-						<%= @amountm.to_s.split(".")[0] %>/416,667 HydroPacks
+						<%= @amountm.to_s.split(".")[0] %>/250,000 HydroPacks
 					</div>
 			</div>
 		</div>
@@ -47,16 +47,16 @@
 				</a>
 					<div id="phcounterd">
 						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
-						<%= count %>/$500,000
+						<%= count %>/$300,000
 					</div>		
 					<div id="phcounterp">
 						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<%= @percentm = percent.to_f/500000 %>%
+						<%= @percentm = percent.to_f/300000 %>%
 					</div>
 					<div id="phcountern">
 				  	<% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
 						<% @amountm = amount.to_f*0.833 %>
-						<%= @amountm.to_s.split(".")[0] %>/416,667 HydroPacks
+						<%= @amountm.to_s.split(".")[0] %>/250,000 HydroPacks
 					</div>
 			</div>
 	</div>
