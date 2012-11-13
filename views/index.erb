@@ -1,7 +1,73 @@
 <div class="container" id="maincontainer">
+<div id="content1"></div>
+<div class="row-fluid hidden-phone">
+		<div class="span12" id="countergraphic">
+				
+				<%= img '/images/rsdlogo.png' %>	
+				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
+					class="fg-donation-button-4ccb04fb46c30 drop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
+				</a>
+	
+					<div id="counterd">
+						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
+						<%= count %>
+					</div>		
+					<!--<div id="counterp">
+						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<%= @percentm = percent.to_f/300000 %>%
+					</div>-->
+					<div id="countern">
+					  <% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<% @amountm = amount.to_f*0.833 %>
+						<%= @amountm.to_s.split(".")[0] %>
+					</div>
+			</div>
+		</div>
+	<div class="row-fluid visible-phone">
+		<div class="phcounter" id="countergraphic">
+				<%= img '/images/countergraphic.png' %>
+				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
+					class="fg-donation-button-4ccb04fb46c30 phdrop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
+				</a>
+					<div id="phcounterd">
+						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
+						<%= count %>
+					</div>		
+					<!--<div id="phcounterp">
+						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<%= @percentm = percent.to_f/300000 %>%
+					</div>-->
+					<div id="phcountern">
+				  	<% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<% @amountm = amount.to_f*0.833 %>
+						<%= @amountm.to_s.split(".")[0] %>
+					</div>
+			</div>
+	</div>
+		<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span4"><%= img '/images/photo1.jpg'%></div>
+			<div class="span4"><%= img '/images/photo2.jpg'%></div>
+		 	<div class="span4"><%= img '/images/photo3.jpg'%></div>
+		</div>
+	</div>
 	<div class="row-fluid">
-		<div class="contentWrapper" id="content1">			
-			<div class="span12"><%= img '/images/rsdlogo.png' %></div>
+		<div class="contentWrapper">
+			<div class="span12"><p class="h3lead">
+			<font color="#00AEEF">Ready Set Drop</font> is the digital media campaign raising $300,000 to acquire and distribute the HydroPack as a 						global tool for disaster recovery. HydroPacks transform any bad water into clean and nutritious hydration, saving lives and 										strengthening communities in water crisis situations.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span12" id="waterdropsq"><%= img '/images/waterdropsq.png'%></div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span12">
+				<p class="h3lead">Disasters are a constant threat against community water sources throughout the world. By putting an effective, short-					term solution in place, Ready Set Drop will be prepared to respond to water crises around the globe and provide <font color="#00AEEF">					Hydration For A World In Need.</font></p>
+			</div>
 		</div>
 	</div>
 	<div class="row-fluid" id="topLogos">
@@ -15,82 +81,10 @@
 		<div class="span4"><a class="scroll" href="#content5" id="drop"></a>
 		</div>
 	</div>
-	<div class="row-fluid hidden-phone">
-		<div class="span12" id="countergraphic">
-				
-				<%= img '/images/countergraphic.png' %>
-	
-				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
-					class="fg-donation-button-4ccb04fb46c30 drop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
-				</a>
-	
-					<div id="counterd">
-						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
-						<%= count %>/$300,000
-					</div>		
-					<!--<div id="counterp">
-						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<%= @percentm = percent.to_f/300000 %>%
-					</div>-->
-					<div id="countern">
-					  <% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<% @amountm = amount.to_f*0.833 %>
-						<%= @amountm.to_s.split(".")[0] %>/250,000 HydroPacks
-					</div>
-			</div>
-		</div>
-	<div class="row-fluid visible-phone">
-		<div class="phcounter" id="countergraphic">
-				<%= img '/images/countergraphic.png' %>
-				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
-					class="fg-donation-button-4ccb04fb46c30 phdrop1" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;">
-				</a>
-					<div id="phcounterd">
-						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
-						<%= count %>/$300,000
-					</div>		
-					<div id="phcounterp">
-						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<%= @percentm = percent.to_f/300000 %>%
-					</div>
-					<div id="phcountern">
-				  	<% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
-						<% @amountm = amount.to_f*0.833 %>
-						<%= @amountm.to_s.split(".")[0] %>/250,000 HPs
-					</div>
-			</div>
-	</div>
 	<div class="row-fluid">
 		<div class="contentWrapper">
-			<div class="span12"><p class="h3lead">
-			<font color="#00AEEF">Ready Set Drop</font> is the digital media campaign raising funds to manufacture and distribute the 											HydroPack with a goal to make it a global tool for immediate intervention in disaster relief scenarios.</p>
-			</div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="contentWrapper" id="content2">
-			<div class="span12"><hr size="5"></div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="contentWrapper">
-			<div class="span6">
-				<%= img '/images/rsdsmall.png' %>
-			</div>
-			<div class="span6">
-				<%= img '/images/irdsmall.png' %>
-			</div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="contentWrapper">
-			<div class="span6">
-				<p>Ready Set Drop bridges a gap between product design innovation and social action. Contributors address this pressing global need while 				bringing communities suffering from water crisis to an effective hydration solution.<br><br><font color="#17AFE5">
-				<a href="http://www.readysetdrop.com/ReadySetDrop.pdf" target="_blank">Click here to download a printable campaign summary.</a></font>
-				</p>
-			</div>
-			<div class="span6">
-				<p>The campaign has partnered with International Relief and Development (IRD), a Washington DC-based, nongovernmental organization. The 				non- profit is responsible for implementing relief, stability and development pro- grams worldwide. IRD will receive the donated 								HydroPack products for pre-positioning and delivery to disaster-struck communities.</p>
+			<div class="span12" id="dltext">
+				<font color="#17AFE5"><a href="http://www.readysetdrop.com/ReadySetDrop.pdf" target="_blank">Download our campaign summary.</a></font>	
 			</div>
 		</div>
 	</div>
@@ -109,16 +103,10 @@
 	<div class="row-fluid">
 		<div class="contentWrapper">
 		 	<div class="span12">
-		 	<p class="h3lead">Technology Meets Design</p>
-		 	<p>The HydroPack uses a unique cellulose membrane that provides the highest degree of filtration possible. This paper-thin barrier – 							developed by HTI and made from Eastman’s cellulose acetate – blocks dirt, bacteria, viruses and other contaminants with a success rate 					that exceeds EPA standards for water purification. Once water is drawn in, the HydroPack’s protective membrane eliminates the possibility 				of recontamination. The nutrient powder inside produces an osmotic pressure that naturally draws water in through the membrane. HTI’s 					filtration process is known as forward osmosis and is identical to the process plants use to pull water into their roots. Eastman and HTI 				have collaborated in bringing together a brilliant technology and a thoughtful design to create the safest and most reliable mobile water 				filtration system available.</p>
+		 	<p><strong><font color="#17AFE5">Technology Meets Design</font></strong></p>
+		 	<p>The HydroPack uses a unique cellulose membrane that provides the highest degree of filtration possible. This paper-thin barrier – 							developed by HTI and made from Eastman’s cellulose acetate – blocks dirt, bacteria, viruses and other contaminants with a success rate 					that exceeds EPA standards for water purification. Once water is drawn in, the HydroPack’s protective membrane eliminates the possibility 				of recontamination. The nutrient powder inside produces an osmotic pressure that naturally draws water in through the membrane. HTI’s 					filtration process is known as forward osmosis and is identical to the process plants use to pull water into their roots. Eastman and HTI 				have collaborated in bringing together a brilliant technology and a thoughtful design to create the safest and most reliable mobile water 				filtration system available.</p><!--
+		 	<p>But technology alone is rarely enough.  To reach a world in need, HTI and Eastman sought the help of the design community in refining a 				great idea.  Ethnographic research by Modern Edge of Portland helped identify communications problems and solutions.  RKS Design took 					these ideas and helped shape an integrated approach between technology, design and implementation.  Together, this diverse community has 				created a truly innovative approach to solving one of the most difficult challenges in any disaster relief effort – providing safe drink 				for those most in need.</p>-->
 		 	</div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="contentWrapper">
-			<div class="span4"><%= img '/images/photo1.jpg'%></div>
-			<div class="span4"><%= img '/images/photo2.jpg'%></div>
-		 	<div class="span4"><%= img '/images/photo3.jpg'%></div>
 		</div>
 	</div>
 	<div class="hidden-phone">
@@ -129,6 +117,21 @@
 	<div class="visible-phone">
 		<div class="contentWrapper" id="contentphone">
 			<iframe width="300" height="169" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span12">
+				<%= img '/images/irdsmall.png' %>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="contentWrapper">
+			<div class="span12">
+				<p>Ready Set Drop has partnered with International Relief and Development (IRD), a Washington DC-based, nongovernmental organization. The 				non- profit is responsible for implementing relief, stability and development pro- grams worldwide. IRD will receive the donated 								HydroPack products for pre-positioning and delivery to disaster-struck communities.</p>
+				<p><a class="scroll" href="#content7">More About Our Partners</a></p>
+			</div>
 		</div>
 	</div>
 	 <div class="row-fluid">
