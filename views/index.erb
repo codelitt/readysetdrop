@@ -41,7 +41,7 @@
 						<% @amountm = amount.to_f*0.833 %>
 						<%= @amountm.to_s.split(".")[0] %>
 					</div>
-							<div class="visible-tablet" id="tcounterd">
+					<div class="visible-tablet" id="tcounterd">
 						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
 						<%= count %>
 					</div>		
@@ -137,6 +137,7 @@
 			<iframe src="http://player.vimeo.com/video/53471602?badge=0" width="300" height="169" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 			<!--<iframe width="300" height="169" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>-->
 		</div>
+	</div>
 	<div class="visible-tablet">
 		<div class="contentWrapper" id="tabletvideo">
 			<iframe src="http://player.vimeo.com/video/53471602?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
