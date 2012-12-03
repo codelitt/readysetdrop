@@ -54,6 +54,10 @@ class App < Sinatra::Base
     erb :index
   end
   
+  get '/samplecard' do 
+    erb :samplecard, :layout => :sclayout 
+  end
+  
   not_found do
   	redirect '404.html'
 	end
