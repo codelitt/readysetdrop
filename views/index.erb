@@ -1,6 +1,6 @@
 <div class="container" id="maincontainer">
 <div id="content1"></div>
-<div class="row-fluid hidden-phone">
+<div class="row-fluid visible-desktop">
 		<div class="span12" id="countergraphic">
 				
 				<%= img '/images/rsdlogo.png' %>	
@@ -23,12 +23,12 @@
 					</div>
 			</div>
 		</div>
-	<div class="row-fluid visible-phone">
-		<div class="phcounter" id="countergraphic">
+	<div class="row-fluid hidden-desktop">
+		<div class="span12" id="phonecounter">
 				<a href="javascript:void(0)" id="2c37c8cc-6e29-11e1-837a-12313b003616.836c5e9e-1ec5-11e2-933b-12313b003cf1" 
 					class="fg-donation-button-4ccb04fb46c30" onclick="FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); 						return false;"><%= img '/images/rsdlogo.png' %>
 				</a>
-					<div id="phcounterd">
+					<div class="visible-phone" id="phcounterd">
 						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
 						<%= count %>
 					</div>		
@@ -36,7 +36,20 @@
 						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
 						<%= @percentm = percent.to_f/300000 %>%
 					</div>-->
-					<div id="phcountern">
+					<div class="visible-phone" id="phcountern">
+				  	<% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<% @amountm = amount.to_f*0.833 %>
+						<%= @amountm.to_s.split(".")[0] %>
+					</div>
+							<div class="visible-tablet" id="tcounterd">
+						<% count = @count.at_css('div.stats p strong').to_s.delete "" %>
+						<%= count %>
+					</div>		
+					<!--<div id="tcounterp">
+						<% percent = @percent.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
+						<%= @percentm = percent.to_f/300000 %>%
+					</div>-->
+					<div class="visible-tablet" id="tcountern">
 				  	<% amount = @amount.at_css('div.stats p strong').to_s.gsub(/[^0-9]/,"") %>
 						<% @amountm = amount.to_f*0.833 %>
 						<%= @amountm.to_s.split(".")[0] %>
@@ -113,7 +126,7 @@
 		 	</div>
 		</div>
 	</div>
-	<div class="hidden-phone">
+	<div class="visible-desktop">
 		<div class="contentWrapper" id="content21">
 			<iframe src="http://player.vimeo.com/video/53471602?badge=0" width="1170" height="658" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 			<!--<iframe width="1170" height="658" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>-->
@@ -122,6 +135,11 @@
 	<div class="visible-phone">
 		<div class="contentWrapper" id="contentphone">
 			<iframe src="http://player.vimeo.com/video/53471602?badge=0" width="300" height="169" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<!--<iframe width="300" height="169" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>-->
+		</div>
+	<div class="visible-tablet">
+		<div class="contentWrapper" id="tabletvideo">
+			<iframe src="http://player.vimeo.com/video/53471602?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 			<!--<iframe width="300" height="169" src="http://www.youtube.com/embed/Q6KiXtkqGDo" frameborder="0" allowfullscreen></iframe>-->
 		</div>
 	</div>
