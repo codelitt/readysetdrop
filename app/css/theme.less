@@ -163,7 +163,7 @@ footer {
 
 #topLogos {
 	display: block;	
-	padding-left: 2%;
+	padding-left: 0%;
 }
 
 #content21 {
@@ -326,7 +326,7 @@ section#home {
 #counterd {
 	position: absolute;
 	top: 30%;
-	left: 63%;
+	left: 62%;
 	left: 73%\9; /* IE 8 and below */
 	width: 50px;
 	color: #00AEEF;
@@ -340,7 +340,7 @@ section#home {
 #countern {
 	position: absolute;
 	top: 60%;
-	left: 65%;
+	left: 64%;
 	left: 78%\9; /* IE 8 and below */
 	width: 400px;
 	color: #00AEEF;
@@ -351,62 +351,131 @@ section#home {
 }
 
 /*phone specific css*/
-#phonecounter {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	padding-top: 0px;
-	margin-left: 0%;
-}
 
-.phdrop1 {
-	position: absolute;
-	top: 28%;
-	left: 35%;
-	display:block;
-	width: 50px;
-	height: 50px;
-	background:transparent; /* url(/images/phdrop1.png) center top no-repeat */
-}
-
-
-#phcounterp {
-	position: absolute;
-	top: 49%;
-	left: 85%;
-	width: 50px;
-	color: #00AEEF;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	font-size: 9px; 
-}
-
-#phcounterd {
-	position: absolute;
-	top: 22%;
-	left: 75%;
-	width: 100px;
-	color: #00AEEF;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	font-size: 8px;
+@media screen and (max-device-width: 640px) {
+	 
+	#countergraphic {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding-top: 20px;
+		margin-left: 0%;
+	}
 	
+	.drop1 {
+		position: absolute;
+		top: 8%;
+		left: 0%;
+		display:block;
+		width: 995px;
+		height: 288px;
+		background:transparent center top no-repeat;
+	}
+	
+	/*.drop1:hover {
+	  background-image: url(/images/drop2.png);
+	}*/
+	
+	#counterp {
+		position: absolute;
+		top: 50%;
+		left: 85%;
+		left: 85%\9; /* IE 8 and below */
+		width: 50px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 28px; 
+		font-size: 28px\9; /* IE 8 and below */
+	}
+	
+	#counterd {
+		position: absolute;
+		top: 30%;
+		left: 75%;
+		width: 50px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 900;
+		font-size: 36px;
+
+	}
+	
+	#countern {
+		position: absolute;
+		top: 60%;
+		left: 78%;
+		width: 400px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 900;
+		font-size: 42px; 
+	}
+}
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+
+	#countergraphic {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding-top: 20px;
+		margin-left: 0%;
+	}
+	
+	.drop1 {
+		position: absolute;
+		top: 8%;
+		left: 0%;
+		display:block;
+		width: 995px;
+		height: 288px;
+		background:transparent center top no-repeat;
+	}
+	
+	/*.drop1:hover {
+	  background-image: url(/images/drop2.png);
+	}*/
+	
+	#counterp {
+		position: absolute;
+		top: 50%;
+		left: 85%;
+		left: 85%\9; /* IE 8 and below */
+		width: 50px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 28px; 
+		font-size: 28px\9; /* IE 8 and below */
+	}
+	
+	#counterd {
+		position: absolute;
+		top: 30%;
+		left: 75%;
+		width: 50px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 900;
+		font-size: 36px;
+
+	}
+	
+	#countern {
+		position: absolute;
+		top: 60%;
+		left: 78%;
+		width: 400px;
+		color: #00AEEF;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 900;
+		font-size: 42px; 
+	}
+
 }
 
-#phcountern {
-	position: absolute;
-	top: 50%;
-	left: 78%;
-	width:200px;
-	color: #00AEEF;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	font-size: 9px;
-}
-
-/* tablet specific */
-
-#tcounterp {
+/*#tcounterp {
 	position: absolute;
 	top: 49%;
 	left: 85%;
@@ -439,7 +508,7 @@ section#home {
 	font-weight: 600;
 	font-size: 26px;
 }
-
+*/
 
 #dfpdxtext {
 	margin-top: 45px;
